@@ -599,8 +599,8 @@ def sunburn_plot(sunburnt):
 
 def bar_plot_counts(dataframe_final_1):
     
-    df_bar = dataframe_final_1
-    df_bar['name_cluster'] = dataframe_final_1.index
+    df_bar = dataframe_final_1.copy()
+    df_bar['name_cluster'] = dataframe_final_1.index.astype(str)
     fig4 = plt1.bar(df_bar, x = 'name_cluster', y = 'Molecules', color = 'name_cluster')
     
     fig4.update_layout(legend_title="Cluster", plot_bgcolor = 'rgb(256,256,256)',
