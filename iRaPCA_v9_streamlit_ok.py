@@ -835,8 +835,9 @@ def clustering_final_function(uploaded_file_1):
     return
 
 if uploaded_file_1 is not None:
-    st.sidebar.markdown(":point_down:")
+    st.sidebar.markdown("-------------------")
     run = st.sidebar.button("RUN")
+    st.sidebar.markdown("-------------------")
     if run == True:
         clustering_final_function(uploaded_file_1)
 else:
