@@ -153,13 +153,6 @@ else:
     graficar_scatter = True
 
     
-st.sidebar.title(":speech_balloon: Contact Us")
-st.sidebar.info(
-"""
-If you are looking to contact us, please
-[:e-mail:](mailto:lideb@biol.unlp.edu.ar) or [Twitter](https://twitter.com/LIDeB_UNLP)
-""")
-    
     
 #%%
 
@@ -852,6 +845,14 @@ else:
         st.markdown("**Running with the example dataset**", unsafe_allow_html=True)
         clustering_final_function(uploaded_file_1)
 
+
+    
+st.sidebar.title(":speech_balloon: Contact Us")
+st.sidebar.info(
+"""
+If you are looking to contact us, please
+[:e-mail:](mailto:lideb@biol.unlp.edu.ar) or [Twitter](https://twitter.com/LIDeB_UNLP)
+""")
   
 #Footer edit
 
