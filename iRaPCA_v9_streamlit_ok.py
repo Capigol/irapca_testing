@@ -88,8 +88,8 @@ st.image(image, caption='Clustering Workflow')
 ########### OPTIONS #######
 # SIDEBAR
 
-st.sidebar.header('Molecular descriptors')
-molecular_descriptors = st.sidebar.checkbox('Check ONLY if you have previously calculated the molecular descriptors')
+#st.sidebar.header('Molecular descriptors')
+molecular_descriptors = st.sidebar.checkbox('Molecular descriptors', help='Check ONLY if you have previously calculated the molecular descriptors')
 if molecular_descriptors == True:
     uploaded_file_1 = st.sidebar.file_uploader("Upload your molecular descriptors in a TXT file. Your file should have a column called 'NAME'", type=["txt"])
     st.sidebar.markdown("""
@@ -104,7 +104,7 @@ else:
     [Example CSV input file](https://raw.githubusercontent.com/Capigol/iRaPCA_v1/main/example_molecules.csv)
     """)
 
-clustering_setting = st.sidebar.checkbox('Check to change the default configuration')
+clustering_setting = st.sidebar.checkbox('Advanced settings', help='Check to change the default configuration')
 if clustering_setting == True:
     st.sidebar.header('Dimensionality reduction')    
     threshold_variance = st.sidebar.slider('Threshold variance', 0.00, 0.20, 0.05, 0.01)
