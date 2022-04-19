@@ -842,7 +842,7 @@ def clustering_final_function(uploaded_file_1):
     return
 
 if uploaded_file_1 is not None:
-    run = st.button("RUN")
+    run = st.sidebar.button("RUN")
     if run == True:
         clustering_final_function(uploaded_file_1)
 else:
